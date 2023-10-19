@@ -196,5 +196,26 @@ function mostrarSitio($id = null)
     return $salida; //retorna 
 }
 
+function imprimirEnlace($id)
+{
+    $salida = ""; //se inicializa la salida 
+
+    $conexion = mysqli_connect('localhost', 'root', '', 'aa'); //conexion a la base de datos.
+
+    $sql = "SELECT * FROM productos WHERE id = '$id'"; //opera sql
+
+    $resultado = $conexion->query($sql); //ejecuta la consulta.
+
+    while ($fila = $resultado->fetch_array()) {
+        $salida .= "<a href='" . $fila['sitio'] . "'>";
+        $salida .= $fila['invitacion'];
+        $salida .= "</a>";
+    }
+
+    $conexion->close(); //para terminar la conexion con la base de datos
+    return $salida; //retorna 
+}
+
+
 
 ?>

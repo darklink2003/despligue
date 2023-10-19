@@ -20,15 +20,19 @@ include("funciones.php");
  //se invoca la contar_usuario
 // echo contar_usuario();
 
-// echo InsertarPersona('alexander','43321');
+ //echo InsertarPersona('maicol','1111');
 //se invoca la InsertarPersona
 
 //echo borrarPersona('alexander','43321');
 //se invoca la borrarPersona
 
-//echo actualizarSitio('instagram','2');
+//echo actualizarSitio('https://www.sena.edu.co/','1');
 //se invoca la actualizarSitio
 
-echo mostrarSitio('1');
+//echo mostrarSitio('3');
 //se invoca la mostrarSitio
+
+echo imprimirEnlace('1');
+//se invoca la imprimirEnlace
+
 ?>
