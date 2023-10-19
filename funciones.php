@@ -33,6 +33,29 @@ function visualizar()
         $salida += $fila['suma']; //los datos del sql al cual apodamos como "suma".
         //puede incrementar o acoumular.
     }
+
+    $conexion->close();
     return $salida; //retorna 
+
+}
+
+
+function calculovs2()
+{
+    $salida = 0; //inicializa la variable
+    $conexion = mysqli_connect('localhost', 'root', '', 'aa'); //conecta a la base de datos
+    $sql = "SELECT 10 as n1, 20  as n2;"; //agrega los datos
+    $resultado = $conexion->query($sql); //ejecuta la consulta.
+
+    while ($fila = $resultado->fetch_assoc()) //cilo mientras para que muestre en pantalla.
+    {
+        $salida += $fila['n1'];
+        //suma las variables n1,n2
+        $salida += $fila['n2'];
+    }
+
+    $conexion->close(); //cierras la conexion 
+    return $salida; //retorna las variables 
+
 }
 ?>
