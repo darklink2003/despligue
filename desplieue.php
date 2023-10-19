@@ -10,5 +10,6 @@ include("funciones.php");
 // //se invoca la funcion calculovs2
 //echo calculovs2();
  //se invoca la funcion edad
-echo edad();
+// echo edad();
+echo contar_usuario();
 ?>

@@ -84,4 +84,19 @@ function edad()
 
 }
 
+function contar_usuario(){
+    $salida = ""; //inicializa la variable
+    $conexion = mysqli_connect('localhost', 'root', '', 'bd_ejercicio_estudiantes1'); //conecta a la base de datos
+    $sql = "SELECT count(*) from tb_estudiantes;"; //agrega los datos
+    $resultado = $conexion->query($sql); //ejecuta la consulta.
+    while($fila = $resultado->fetch_assoc())//cilo mientras para que muestre en pantalla.
+    {
+        $salida = $fila["count(*)"];
+    }
+
+    $conexion->close(); //cierras la conexion 
+    return $salida; //retorna las variables 
+
+
+}
 ?>
