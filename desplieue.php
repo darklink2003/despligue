@@ -3,5 +3,7 @@
 include("funciones.php");
 //se invoca la funcion consulta
 echo consulta();
+//se invoca la funcion areac
+echo areac();
 
 ?>
