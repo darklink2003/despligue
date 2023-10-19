@@ -58,4 +58,30 @@ function calculovs2()
     return $salida; //retorna las variables 
 
 }
+
+function edad()
+{
+    $salida = ""; //inicializa la variable
+    $conexion = mysqli_connect('localhost', 'root', '', 'aa'); //conecta a la base de datos
+    $sql = "SELECT 21 as edad;"; //agrega los datos
+    $resultado = $conexion->query($sql); //ejecuta la consulta.
+
+    while($fila = $resultado->fetch_assoc())//cilo mientras para que muestre en pantalla.
+    {
+        
+        if ($fila['edad'] >= 18 )
+        {
+            $salida.= "Tienes ".$fila['edad']." Eres mayor de edad";//los datos del sql al cual apodamos como "suma".
+            //puede incrementar o acoumular
+        }else{
+            $salida.="Tienes ".$fila['edad']." Eres menor de edad";//los datos del sql al cual apodamos como "suma".
+            //puede incrementar o acoumular
+        }
+    }
+
+    $conexion->close(); //cierras la conexion 
+    return $salida; //retorna las variables 
+
+}
+
 ?>
