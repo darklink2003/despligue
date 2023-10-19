@@ -5,5 +5,4 @@ include("funciones.php");
 echo consulta();
 //se invoca la funcion areac
 echo areac();
-
 ?>
